@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   user-select: none;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 #calculator {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 15%);
   border-radius: 15px;
   max-width: 500px;
@@ -29,6 +29,7 @@ body {
     border: none;
     outline: none;
     background-color: hsl(0, 0%, 20%);
+    color: white;
   }
   #keys {
     display: grid;
@@ -37,11 +38,19 @@ body {
     padding: 25px;
     .action {
       background-color: #ff7e47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       &:hover {
         background-color: hsl(35, 100%, 45%);
       }
       &:active {
         background-color: hsl(35, 100%, 60%);
+      }
+      .delete {
+        width: 50px;
+        height: 50px;
       }
     }
 

@@ -13,8 +13,8 @@
     />
   </head>
   <body>
-    <div id="calculator" readonly>
-      <input id="display" />
+    <div id="calculator">
+      <input id="display" readonly />
       <div id="keys">
         <button onclick="appendToDisplay('+')" class="action">+</button>
         <button onclick="appendToDisplay('7')">7</button>
@@ -32,7 +32,10 @@
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
         <button onclick="calculate()">=</button>
-        <button onclick="clearDisplay()" class="action">C</button>
+        <button onclick="clearDisplay()" class="action">AC</button>
+        <button onclick="DeleteOne()" class="action">
+          <img src="../assets/delete.svg" alt="" class="delete" />
+        </button>
       </div>
     </div>
   </body>
