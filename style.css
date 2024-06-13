@@ -3,9 +3,9 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -24,6 +24,7 @@ body {
   border-radius: 15px;
   max-width: 500px;
   overflow: hidden;
+  border: 1px solid #4d4d4d;
 }
 #calculator #display {
   width: 100%;
@@ -74,4 +75,48 @@ body {
 }
 #calculator #keys button:active {
   background-color: hsl(0deg, 0%, 50%);
+}
+
+@media screen and (max-width: 510px) {
+  #calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0deg, 0%, 15%);
+    border-radius: 10px;
+    max-width: 350px;
+    overflow: hidden;
+  }
+  #calculator #keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+  #calculator #display {
+    width: 100%;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: hsl(0deg, 0%, 20%);
+    color: white;
+  }
+  #calculator #keys button {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    border: none;
+    background-color: hsl(0deg, 0%, 30%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #calculator #keys .action .delete {
+    width: 30px;
+    height: 30px;
+  }
+  body {
+    background-color: #262626;
+  }
 }
